@@ -4,7 +4,11 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "target": "esnext",
-    "jsx": "react-jsx"
-  },
-  "include": ["*.ts", "*.tsx"]
+    "jsx": "react-jsx",
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "."
+  }
 }

@@ -4,19 +4,28 @@
   "description": "Personal Oxlint Config of @satya164",
   "type": "module",
   "license": "MIT",
-  "files": [
-    "recommended.ts",
-    "react.ts",
-    "typechecked.ts",
-    "vitest.ts",
-    "jest.ts"
-  ],
+  "files": ["dist/configs"],
   "exports": {
-    "./recommended": "./recommended.ts",
-    "./react": "./react.ts",
-    "./typechecked": "./typechecked.ts",
-    "./vitest": "./vitest.ts",
-    "./jest": "./jest.ts"
+    "./recommended": {
+      "types": "./dist/configs/recommended.d.ts",
+      "default": "./dist/configs/recommended.js"
+    },
+    "./react": {
+      "types": "./dist/configs/react.d.ts",
+      "default": "./dist/configs/react.js"
+    },
+    "./typechecked": {
+      "types": "./dist/configs/typechecked.d.ts",
+      "default": "./dist/configs/typechecked.js"
+    },
+    "./vitest": {
+      "types": "./dist/configs/vitest.d.ts",
+      "default": "./dist/configs/vitest.js"
+    },
+    "./jest": {
+      "types": "./dist/configs/jest.d.ts",
+      "default": "./dist/configs/jest.js"
+    }
   },
   "repository": {
     "type": "git",
@@ -27,6 +36,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
+    "prepack": "tsc",
     "release": "release-it --only-version",
     "test": "oxlint __tests__/"
   },
@@ -39,6 +49,7 @@
     "@types/react": "^19.2.14",
     "oxlint": "^1.53.0",
     "oxlint-tsgolint": "^0.16.0",
-    "release-it": "^19.0.2"
+    "release-it": "^19.0.2",
+    "typescript": "^5.9.3"
   }
 }
