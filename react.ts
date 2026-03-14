@@ -5,6 +5,7 @@ export default defineConfig({
   rules: {
     'react/button-has-type': 'error',
     'react/display-name': 'error',
+    'react/exhaustive-deps': 'error',
     'react/forward-ref-uses-ref': 'error',
     'react/iframe-missing-sandbox': 'error',
     'react/jsx-key': 'error',
@@ -17,8 +18,8 @@ export default defineConfig({
     'react/jsx-pascal-case': 'error',
     'react/no-array-index-key': 'error',
     'react/no-children-prop': 'error',
-    'react/no-danger': 'error',
     'react/no-danger-with-children': 'error',
+    'react/no-danger': 'error',
     'react/no-did-mount-set-state': 'error',
     'react/no-direct-mutation-state': 'error',
     'react/no-find-dom-node': 'error',
@@ -30,10 +31,8 @@ export default defineConfig({
     'react/no-unsafe': 'error',
     'react/no-will-update-set-state': 'error',
     'react/require-render-return': 'error',
+    'react/rules-of-hooks': 'error',
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error',
-
-    'react-hooks/exhaustive-deps': 'error',
-    'react-hooks/rules-of-hooks': 'error',
   },
 });
