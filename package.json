@@ -2,14 +2,22 @@
   "name": "oxlint-config-satya164",
   "version": "0.1.0",
   "description": "Personal Oxlint Config of @satya164",
+  "type": "module",
   "license": "MIT",
   "files": [
-    "recommended.json",
-    "react.json",
-    "typechecked.json",
-    "vitest.json",
-    "jest.json"
+    "recommended.ts",
+    "react.ts",
+    "typechecked.ts",
+    "vitest.ts",
+    "jest.ts"
   ],
+  "exports": {
+    "./recommended": "./recommended.ts",
+    "./react": "./react.ts",
+    "./typechecked": "./typechecked.ts",
+    "./vitest": "./vitest.ts",
+    "./jest": "./jest.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/satya164/oxlint-config-satya164.git"

@@ -24,28 +24,28 @@ First, install the required packages:
 npm install --save-dev oxlint oxlint-config-satya164
 ```
 
-Now create an `.oxlintrc.json` in your project root and extend the configs you need:
+Now create an `oxlint.config.mts` in your project root and extend the configs you need:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "extends": [
-    "./node_modules/oxlint-config-satya164/recommended.json",
-    "./node_modules/oxlint-config-satya164/react.json"
-  ]
-}
+```ts
+import { defineConfig } from 'oxlint';
+import react from 'oxlint-config-satya164/react';
+import recommended from 'oxlint-config-satya164/recommended';
+
+export default defineConfig({
+  extends: [recommended, react],
+});
 ```
 
 You can also enable type-aware rules:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "extends": [
-    "./node_modules/oxlint-config-satya164/recommended.json",
-    "./node_modules/oxlint-config-satya164/typechecked.json"
-  ]
-}
+```ts
+import { defineConfig } from 'oxlint';
+import recommended from 'oxlint-config-satya164/recommended';
+import typechecked from 'oxlint-config-satya164/typechecked';
+
+export default defineConfig({
+  extends: [recommended, typechecked],
+});
 ```
 
 Type-aware rules require [`oxlint-tsgolint`](https://www.npmjs.com/package/oxlint-tsgolint):
@@ -56,11 +56,11 @@ npm install --save-dev oxlint-tsgolint
 
 ## Available configs
 
-- **`recommended.json`** — Core JavaScript/TypeScript rules, import, promise, and unicorn rules.
-- **`react.json`** — React and React hooks rules including JSX validation, DOM safety, and component best practices.
-- **`typechecked.json`** — Strict type-checked TypeScript rules (requires `oxlint-tsgolint`).
-- **`vitest.json`** — Rules for Vitest test files.
-- **`jest.json`** — Rules for Jest test files.
+- **`recommended`** — Core JavaScript/TypeScript rules, import, promise, and unicorn rules.
+- **`react`** — React and React hooks rules including JSX validation, DOM safety, and component best practices.
+- **`typechecked`** — Strict type-checked TypeScript rules (requires `oxlint-tsgolint`).
+- **`vitest`** — Rules for Vitest test files.
+- **`jest`** — Rules for Jest test files.
 
 To lint your files, you can add the following script to your `package.json`:
 
