@@ -1,10 +1,12 @@
 {
   "name": "oxlint-config-satya164",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Personal Oxlint Config of @satya164",
   "type": "module",
   "license": "MIT",
-  "files": ["dist/configs"],
+  "files": [
+    "dist/configs"
+  ],
   "exports": {
     "./recommended": {
       "types": "./dist/configs/recommended.d.ts",
