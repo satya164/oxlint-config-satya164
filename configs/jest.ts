@@ -1,6 +1,6 @@
-import { defineConfig } from 'oxlint';
+import { defineConfig, type OxlintConfig, type OxlintOverride } from 'oxlint';
 
-export default defineConfig({
+export default defineConfig<OxlintConfig>({
   plugins: ['jest'],
   env: {
     builtin: true,
@@ -43,5 +43,5 @@ export default defineConfig({
         'jest/require-to-throw-message': 'error',
       },
     },
-  ],
+  ] satisfies OxlintOverride[],
 });

@@ -1,6 +1,6 @@
-import { defineConfig } from 'oxlint';
+import { defineConfig, type OxlintConfig, type OxlintOverride } from 'oxlint';
 
-export default defineConfig({
+export default defineConfig<OxlintConfig>({
   plugins: ['vitest'],
   rules: {
     'vitest/expect-expect': 'error',
@@ -28,5 +28,5 @@ export default defineConfig({
         'vitest/require-to-throw-message': 'error',
       },
     },
-  ],
+  ] satisfies OxlintOverride[],
 });

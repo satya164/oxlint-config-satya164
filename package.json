@@ -44,7 +44,7 @@
   "scripts": {
     "prepack": "tsc",
     "release": "release-it --only-version",
-    "test": "oxlint __tests__/"
+    "test": "tsc --noEmit && oxlint __tests__/"
   },
   "peerDependencies": {
     "oxlint": "*"

@@ -1,6 +1,6 @@
-import { defineConfig } from 'oxlint';
+import { defineConfig, type OxlintConfig, type OxlintOverride } from 'oxlint';
 
-export default defineConfig({
+export default defineConfig<OxlintConfig>({
   plugins: ['typescript'],
   options: {
     typeAware: true,
@@ -86,5 +86,5 @@ export default defineConfig({
         'typescript/use-unknown-in-catch-callback-variable': 'error',
       },
     },
-  ],
+  ] satisfies OxlintOverride[],
 });

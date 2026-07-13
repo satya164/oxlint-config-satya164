@@ -1,6 +1,6 @@
-import { defineConfig } from 'oxlint';
+import { defineConfig, type OxlintConfig, type OxlintOverride } from 'oxlint';
 
-export default defineConfig({
+export default defineConfig<OxlintConfig>({
   plugins: ['import', 'promise', 'unicorn'],
   categories: {
     correctness: 'error',
@@ -195,5 +195,5 @@ export default defineConfig({
         node: true,
       },
     },
-  ],
+  ] satisfies OxlintOverride[],
 });

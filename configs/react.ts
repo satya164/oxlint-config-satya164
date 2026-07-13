@@ -1,6 +1,6 @@
-import { defineConfig } from 'oxlint';
+import { defineConfig, type OxlintConfig } from 'oxlint';
 
-export default defineConfig({
+export default defineConfig<OxlintConfig>({
   plugins: ['react'],
   rules: {
     'react/button-has-type': 'error',
