@@ -8,6 +8,10 @@
     "dist/configs"
   ],
   "exports": {
+    ".": {
+      "types": "./dist/configs/index.d.ts",
+      "default": "./dist/configs/index.js"
+    },
     "./recommended": {
       "types": "./dist/configs/recommended.d.ts",
       "default": "./dist/configs/recommended.js"
@@ -46,12 +50,12 @@
     "oxlint": "*"
   },
   "devDependencies": {
-    "@evilmartians/lefthook": "^1.11.12",
-    "@release-it/conventional-changelog": "^10.0.1",
-    "@types/react": "^19.2.14",
-    "oxlint": "^1.53.0",
-    "oxlint-tsgolint": "^0.16.0",
-    "release-it": "^19.0.2",
-    "typescript": "^5.9.3"
+    "@evilmartians/lefthook": "^2.1.10",
+    "@release-it/conventional-changelog": "^11.0.1",
+    "@types/react": "^19.2.17",
+    "oxlint": "^1.73.0",
+    "oxlint-tsgolint": "^0.24.0",
+    "release-it": "^20.2.1",
+    "typescript": "^7.0.2"
   }
 }

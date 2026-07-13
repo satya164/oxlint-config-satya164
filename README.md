@@ -24,28 +24,27 @@ First, install the required packages:
 npm install --save-dev oxlint oxlint-config-satya164
 ```
 
-Now create an `oxlint.config.mts` in your project root and extend the configs you need:
+Now create an `oxlint.config.ts` in your project root and compose the configs you need:
 
 ```ts
-import { defineConfig } from 'oxlint';
+import { compose } from 'oxlint-config-satya164';
 import react from 'oxlint-config-satya164/react';
 import recommended from 'oxlint-config-satya164/recommended';
 
-export default defineConfig({
-  extends: [recommended, react],
-});
+export default compose(recommended, react);
 ```
+
+The `compose` function accepts config objects or nested arrays.
+Configs are applied in order, so later rules and options override earlier ones.
 
 You can also enable type-aware rules:
 
 ```ts
-import { defineConfig } from 'oxlint';
+import { compose } from 'oxlint-config-satya164';
 import recommended from 'oxlint-config-satya164/recommended';
 import typechecked from 'oxlint-config-satya164/typechecked';
 
-export default defineConfig({
-  extends: [recommended, typechecked],
-});
+export default compose(recommended, typechecked);
 ```
 
 Type-aware rules require [`oxlint-tsgolint`](https://www.npmjs.com/package/oxlint-tsgolint):
